@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const changeMe = setTimeout(function(){ 
+        console.log("Hello"); //prints one time and setinterval prints infinite times...synt=> handler i.e. callback fn or just reference to a fn,delay
+        document.querySelector('h1').innerHTML='Javascript' 
+    },2000);  //instead of fn we can also igve just reference and not the executiion
+
+    document.querySelector('#stop').addEventListener('click',function(e){
+        clearTimeout(changeMe);
+        console.log("stopped");
+        
+    })
+
+</script>
+</html>
